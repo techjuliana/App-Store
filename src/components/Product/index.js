@@ -1,42 +1,49 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
-export default function Product({ data, addToCart}) {
- return (
-   <View style={styles.container}>
-    <View>
-      <Text style={styles.title}>{data.name}</Text>
-      <Text style={styles.price}>R$ {data.price}</Text>
+export default function Product({ data, addToCart }) {
+  return (
+    <View style={styles.container}>
+      <View>
+        <Text style={styles.title}>{data.name}</Text>
+        <Text style={styles.price}>R$ {data.price}</Text>
+      </View>
+
+      <TouchableOpacity style={styles.buttonAdd} onPress={addToCart}>
+        <Image
+          source={require("./../../assets/bags.jpg")}
+          style={{ width: 34, height: 36 }}
+        />
+      </TouchableOpacity>
     </View>
-
-    <TouchableOpacity style={styles.buttonAdd} onPress={addToCart}>
-      <Text style={styles.buttonText}>+</Text>
-    </TouchableOpacity>
-   </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     borderWidth: 1,
-    borderColor: '#DFDFDF',
+    borderColor: "#DFDFDF",
     borderRadius: 2,
     marginBottom: 14,
     padding: 8,
     paddingBottom: 14,
     paddingTop: 14,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-  title:{
-    fontWeight: 'bold'
+  title: {
+    fontWeight: "bold",
   },
-  buttonAdd:{
+  buttonAdd: {
     paddingStart: 12,
     paddingEnd: 12,
-    backgroundColor: '#168fff',
     paddingTop: 6,
     paddingBottom: 6,
+  },
+  imagem: {
     borderRadius: 2,
-  }
-})
+    width: 50,
+    height: 40,
+    margin: 0,
+  },
+});

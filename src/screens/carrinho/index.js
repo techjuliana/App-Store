@@ -1,5 +1,11 @@
 import { useContext } from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import { CartContext } from "../../components/contexts/CartContext";
 import CardItem from "../../components/CardItem";
 
@@ -24,6 +30,9 @@ export default function Carrinho() {
           <Text style={stlyes.total}>Total: R$ {total}</Text>
         )}
       />
+      <TouchableOpacity>
+        <Text>Finalizar pedido</Text>
+      </TouchableOpacity>
     </View>
   );
 }

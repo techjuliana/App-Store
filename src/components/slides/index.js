@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-export default function Produtos() {
+export default function Slides() {
  return (
    <View/>
   );
