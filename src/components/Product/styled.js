@@ -17,11 +17,15 @@ export const Title = styled.Text`
   font-weight: bold;
 `;
 
-export const ButtonAdd = styled.View`
+export const Price = styled.Text`
+  font-weight: bold;
+`;
+
+export const ButtonAdd = styled.TouchableOpacity`
   padding: 12px;
 `;
 
-export const Imagem = styled.View`
+export const Imagem = styled.Image`
   border-radius: 2px;
   width: 50px;
   height: 40px;

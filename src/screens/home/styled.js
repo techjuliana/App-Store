@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const Container = styled.View`
+export const Container = styled.SafeAreaView`
   flex: 1;
   background-color: "white";
   padding: 14px;
@@ -15,7 +15,7 @@ export const CartContent = styled.View`
   background-color: "white";
 `;
 
-export const Title = styled.View`
+export const Title = styled.Text`
   font-size: 24px;
   font-weight: "bold";
 `;
@@ -36,3 +36,5 @@ export const Dot = styled.View`
 export const DotText = styled.Text`
   font-size: 12px;
 `;
+
+export const CartButton = styled.TouchableOpacity``;

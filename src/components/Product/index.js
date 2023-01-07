@@ -1,50 +1,27 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-
+import { View, Image } from "react-native";
+import { Container, Title, ButtonAdd, Imagem } from "./styled";
+import {
+  Container,
+  Title,
+  Price,
+  ButtonAdd,
+  Imagem,
+} from "./styled";
 export default function Product({ data, addToCart }) {
   return (
-    <View style={styles.container}>
-     
+    <Container>
       <View>
-      <Image source={data.image} style={styles.imagem}/>
-        <Text style={styles.title}>{data.name}</Text>
-        <Text style={styles.price}>R$ {data.price}</Text>
+        <Imagem source={data.image} />
+        <Title>{data.name}</Title>
+        <Price>R$ {data.price}</Price>
       </View>
 
-      <TouchableOpacity style={styles.buttonAdd} onPress={addToCart}>
+      <ButtonAdd onPress={addToCart}>
         <Image
           source={require("./../../assets/bags.jpg")}
           style={{ width: 34, height: 36 }}
         />
-      </TouchableOpacity>
-    </View>
+      </ButtonAdd>
+    </Container>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    borderWidth: 1,
-    borderColor: "#DFDFDF",
-    borderRadius: 2,
-    marginBottom: 14,
-    padding: 8,
-    paddingBottom: 14,
-    paddingTop: 14,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  title: {
-    fontWeight: "bold",
-  },
-  buttonAdd: {
-    paddingStart: 12,
-    paddingEnd: 12,
-    paddingTop: 6,
-    paddingBottom: 6,
-  },
-  imagem: {
-    borderRadius: 2,
-    width: 10,
-    height: 10,
-  },
-});

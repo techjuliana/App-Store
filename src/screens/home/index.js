@@ -1,14 +1,13 @@
 import { useState, useContext } from "react";
+import { FlatList, Image } from "react-native";
 import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  FlatList,
-  TouchableOpacity,
-  Image,
-} from "react-native";
-
+  Container,
+  CartContent,
+  Title,
+  Dot,
+  DotText,
+  CartButton,
+} from "./styled";
 import Product from "../../components/product";
 import { useNavigation } from "@react-navigation/native";
 import { CartContext } from "../../components/contexts/CartContext";
@@ -85,25 +84,22 @@ export default function Home() {
   }
 
   return (
-    <SafeAreaView style={stlyes.container}>
-      <View style={stlyes.cartContent}>
-        <Text style={stlyes.title}>Buguer Castle</Text>
+    <Container>
+      <CartContent>
+        <Title>Buguer Castle</Title>
 
-        <TouchableOpacity
-          style={stlyes.cartButton}
-          onPress={() => navigation.navigate("Carrinho")}
-        >
+        <CartButton onPress={() => navigation.navigate("Carrinho")}>
           {cart.length >= 1 && (
-            <View style={stlyes.dot}>
-              <Text style={stlyes.dotText}>{cart?.length}</Text>
-            </View>
+            <Dot>
+              <DotText>{cart?.length}</DotText>
+            </Dot>
           )}
           <Image
             source={require("./../../assets/cart.png")}
             style={{ width: 42, height: 34 }}
           />
-        </TouchableOpacity>
-      </View>
+        </CartButton>
+      </CartContent>
 
       <FlatList
         style={stlyes.list}
@@ -113,42 +109,6 @@ export default function Home() {
           <Product data={item} addToCart={() => handleAddCart(item)} />
         )}
       />
-    </SafeAreaView>
+    </Container>
   );
 }
-
-const stlyes = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    paddingEnd: 14,
-    paddingStart: 14,
-  },
-  cartContent: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: 24,
-    marginBottom: 24,
-    backgroundColor: "white",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-  },
-  dot: {
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "yellow",
-    width: 20,
-    height: 20,
-    borderRadius: 12,
-    position: "absolute",
-    zIndex: 99,
-    bottom: -2,
-    left: -4,
-  },
-  dotText: {
-    fontSize: 12,
-  },
-});

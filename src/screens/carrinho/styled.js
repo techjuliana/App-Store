@@ -6,7 +6,7 @@ export const Container = styled.View`
   padding: 14px;
 `;
 
-export const Total = styled.View`
+export const Total = styled.Text`
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 24px;

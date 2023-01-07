@@ -8,12 +8,17 @@ export const Container = styled.View`
   padding: 8px;
 `;
 
+export const Imagem = styled.Image`
+  width: 10;
+  height: 10;
+`;
+
 export const Title = styled.Text`
   font-weight: "bold";
   font-size: 18;
 `;
 
-export const Price = styled.View`
+export const Price = styled.Text`
   font-size: 16px;
 `;
 
@@ -24,7 +29,7 @@ export const AmountContainer = styled.View`
   align-items: center;
 `;
 
-export const ButtonAdd = styled.View`
+export const ButtonAdd = styled.TouchableOpacity`
   background-color: "green";
   padding: 6px;
   padding-left: 14px;
@@ -32,7 +37,7 @@ export const ButtonAdd = styled.View`
   border-radius: 2px;
 `;
 
-export const ButtonRemove = styled.View`
+export const ButtonRemove = styled.TouchableOpacity`
   background-color: "red";
   padding: 6px;
   padding-left: 14px;
@@ -40,7 +45,7 @@ export const ButtonRemove = styled.View`
   border-radius: 2px;
 `;
 
-export const Amount = styled.View`
+export const Amount = styled.Text`
   margin-left: 14px;
   margin-right: 14px;
 `;
