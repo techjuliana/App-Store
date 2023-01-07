@@ -3,7 +3,9 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 export default function Product({ data, addToCart }) {
   return (
     <View style={styles.container}>
+     
       <View>
+      <Image source={data.image} style={styles.imagem}/>
         <Text style={styles.title}>{data.name}</Text>
         <Text style={styles.price}>R$ {data.price}</Text>
       </View>
@@ -42,8 +44,7 @@ const styles = StyleSheet.create({
   },
   imagem: {
     borderRadius: 2,
-    width: 50,
-    height: 40,
-    margin: 0,
+    width: 10,
+    height: 10,
   },
 });

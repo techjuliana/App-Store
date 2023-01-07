@@ -1,6 +1,9 @@
 export const tema = {
   white: "#FFFFFF",
-  gray: "#7C7A80",
-  red: "#E50815",
-  black: "#141414",
+  red: "#D72A07",
+  black: "#18181A",
+  yellow: " #FDC831",
+  orange: "#F07704",
+  maroon: " #5D3527",
+  gray: "#4B4B4D",
 };

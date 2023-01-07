@@ -6,12 +6,13 @@ import {
   FlatList,
   TouchableOpacity,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { CartContext } from "../../components/contexts/CartContext";
 import CardItem from "../../components/CardItem";
 
 export default function Carrinho() {
   const { cart, addItemCart, removeItemCart, total } = useContext(CartContext);
-
+  const navigation = useNavigation();
   return (
     <View style={stlyes.container}>
       <FlatList
@@ -30,7 +31,7 @@ export default function Carrinho() {
           <Text style={stlyes.total}>Total: R$ {total}</Text>
         )}
       />
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Finalizado")}>
         <Text>Finalizar pedido</Text>
       </TouchableOpacity>
     </View>

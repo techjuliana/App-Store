@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function CardItem({ data, addAmount, removeAmount }) {
   const [amount, setAmount] = useState(data?.amount);
@@ -22,6 +22,7 @@ export default function CardItem({ data, addAmount, removeAmount }) {
 
   return (
     <View style={styles.container}>
+       <Image source={data.image} style={styles.imagem}/>
       <View>
         <Text style={styles.title}>{data.name}</Text>
         <Text style={styles.price}>R$ {data.price}</Text>
@@ -49,6 +50,10 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     marginBottom: 14,
     padding: 8,
+  },
+  imagem: {
+    with: 10,
+    height: 10,
   },
   title: {
     fontWeight: "bold",
