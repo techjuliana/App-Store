@@ -1,36 +1,47 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "../screens/home";
-import Carrinho from "../screens/carrinho";
-import PedidoFinalizado from "../screens/pedidoFinalizado";
+import React from 'react';
 
-const Stack = createNativeStackNavigator();
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-export default function Routes() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={Home}
+import StackRoutes from './stackRoutes';
+import Mapa from "../screens/camera";
+import Camera from "../screens/mapa";
+
+import CustomDrawer from '../components/CustomDrawer';
+
+const Drawer = createDrawerNavigator();
+
+export default function Routes(){
+  return(
+    <Drawer.Navigator 
+      drawerContent={CustomDrawer}
+      screenOptions={{
+        headerShown: false,
+
+        drawerActiveBackgroundColor: '#00dae4',
+        drawerActiveTintColor: '#FFF',
+
+        drawerInactiveBackgroundColor: '#f1f1f1',
+        drawerInactiveTintColor: '#000'
+
+      }}
+    >
+      <Drawer.Screen
+        name="HomeStack"
+        component={StackRoutes}
         options={{
-          headerShown: false,
+          title: 'Inicio'
         }}
       />
 
-      <Stack.Screen
-        name="Carrinho"
-        component={Carrinho}
-        options={{
-          headerTitle: "Meu Carrinho",
-        }}
+      <Drawer.Screen
+        name="Localização"
+        component={Mapa}
       />
 
-      <Stack.Screen
-        name="Finalizado"
-        component={PedidoFinalizado}
-        options={{
-          headerShown: false,
-        }}
+      <Drawer.Screen
+        name="Compartilhe foto curtindo seu lanche"
+        component={Camera}
       />
-    </Stack.Navigator>
-  );
+    </Drawer.Navigator>
+  )
 }

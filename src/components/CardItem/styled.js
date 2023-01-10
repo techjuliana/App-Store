@@ -14,7 +14,7 @@ export const Imagem = styled.Image`
 `;
 
 export const Title = styled.Text`
-  font-weight: "bold";
+  font-weight: bold;
   font-size: 18;
 `;
 
@@ -30,7 +30,7 @@ export const AmountContainer = styled.View`
 `;
 
 export const ButtonAdd = styled.TouchableOpacity`
-  background-color: "green";
+  background-color: green;
   padding: 6px;
   padding-left: 14px;
   padding-right: 14px;
@@ -38,7 +38,7 @@ export const ButtonAdd = styled.TouchableOpacity`
 `;
 
 export const ButtonRemove = styled.TouchableOpacity`
-  background-color: "red";
+  background-color: red;
   padding: 6px;
   padding-left: 14px;
   padding-right: 14px;
