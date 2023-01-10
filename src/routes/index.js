@@ -3,8 +3,8 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import StackRoutes from './stackRoutes';
-import Mapa from "../screens/camera";
-import Camera from "../screens/mapa";
+import Camera from "../screens/camera";
+import Mapa from "../screens/mapa";
 
 import CustomDrawer from '../components/CustomDrawer';
 

@@ -12,6 +12,7 @@ import Product from "../../components/product";
 import { useNavigation } from "@react-navigation/native";
 import { CartContext } from "../../components/contexts/CartContext";
 import Header from "../../components/header";
+import Carrossel from "../../components/carrossel";
 
 export default function Home() {
   const { cart, addItemCart } = useContext(CartContext);
@@ -87,7 +88,7 @@ export default function Home() {
   return (
     <Container>
       <CartContent>
-      <Header/>
+        <Header />
         <Title>Buguer Castle</Title>
         <CartButton onPress={() => navigation.navigate("Carrinho")}>
           {cart.length >= 1 && (
@@ -101,9 +102,8 @@ export default function Home() {
           />
         </CartButton>
       </CartContent>
-
+      <Carrossel />
       <FlatList
-        // style={stlyes.list}
         data={products}
         keyExtractor={(item) => String(item.id)}
         renderItem={({ item }) => (
