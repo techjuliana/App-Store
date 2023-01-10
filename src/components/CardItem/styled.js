@@ -9,13 +9,14 @@ export const Container = styled.View`
 `;
 
 export const Imagem = styled.Image`
-  width: 10;
-  height: 10;
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
 `;
 
 export const Title = styled.Text`
   font-weight: bold;
-  font-size: 18;
+  font-size: 18px;
 `;
 
 export const Price = styled.Text`

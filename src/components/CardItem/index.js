@@ -31,8 +31,9 @@ export default function CardItem({ data, addAmount, removeAmount }) {
 
   return (
     <Container>
-      <Imagem source={data.image} />
+     
       <View>
+      <Imagem source={data.image} />
         <Title>{data.name}</Title>
         <Price>R$ {data.price}</Price>
       </View>
