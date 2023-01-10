@@ -23,6 +23,7 @@ export default function StackRoutes() {
         component={Carrinho}
         options={{
           headerTitle: "Meu Carrinho",
+          headerTintColor:"#F07704",
         }}
       />
 

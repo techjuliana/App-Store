@@ -1,28 +1,36 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
-  border: 1px;
-  /* border-color: "#DFDFDf"; */
-  /* color: ${(props) => props.theme.white}; */
-  border-radius: 2px;
+  border-width: 4px;
+  border-color: ${(props) => props.theme.yellow};
+  border-radius: 10px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   margin-bottom: 14px;
   padding: 8px;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: ${(props) => props.theme.white};
 `;
 
 export const Imagem = styled.Image`
-  width: 200px;
-  height: 120px;
+  width: 189px;
+  height: 100px;
   border-radius: 10px;
+  border-top-left-radius: 40px;
 `;
 
 export const Title = styled.Text`
-  color: ${(props) => props.theme.white};
+  color: ${(props) => props.theme.black};
   font-weight: bold;
   font-size: 18px;
 `;
 
 export const Price = styled.Text`
-  color: ${(props) => props.theme.white};
+  color: ${(props) => props.theme.black};
   font-size: 16px;
 `;
 
@@ -50,7 +58,8 @@ export const ButtonRemove = styled.TouchableOpacity`
 `;
 
 export const Amount = styled.Text`
+  padding: 10px;
   margin-left: 14px;
   margin-right: 14px;
-  color: ${(props) => props.theme.white};
+  color: ${(props) => props.theme.black};
 `;

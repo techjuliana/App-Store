@@ -25,8 +25,8 @@ export default function CustomDrawer(props) {
 
         <Text
           style={{
-            color: "#000",
-            fontSize: 17,
+            color: "#F07704",
+            fontSize: 18,
             marginTop: 5,
             marginBottom: 35,
           }}

@@ -39,7 +39,7 @@ export default function Routes(){
       />
 
       <Drawer.Screen
-        name="Compartilhe foto curtindo seu lanche"
+        name="Compartilhe curtindo seu lanche"
         component={Camera}
       />
     </Drawer.Navigator>

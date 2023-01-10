@@ -12,13 +12,15 @@ export const CartContent = styled.View`
   align-items: center;
   margin-top: 24px;
   margin-bottom: 24px;
-  background-color: ${(props) => props.theme.orange};
+  background-color: ${(props) => props.theme.white};
+  padding:10px;
+  border-radius:10px;
 `;
 
 export const Title = styled.Text`
   font-size: 24px;
   font-weight: bold;
-  color: ${(props) => props.theme.white};
+  color: ${(props) => props.theme.orange};
 `;
 
 export const Dot = styled.View`
