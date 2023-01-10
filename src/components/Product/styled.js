@@ -2,7 +2,8 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   border-width: 1px;
-  border-color: "#DFDFDF";
+  /* border-color: "#DFDFDF"; */
+  /* color: ${(props) => props.theme.white}; */
   border-radius: 2px;
   margin-bottom: 14px;
   padding: 8px;
@@ -15,9 +16,13 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-weight: bold;
+  font-size:17px;
+  color: ${(props) => props.theme.white};
 `;
 
 export const Price = styled.Text`
+  color: ${(props) => props.theme.white};
+  font-size:15px;
   font-weight: bold;
 `;
 

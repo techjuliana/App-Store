@@ -6,7 +6,8 @@ export const CartContent = styled.View`
   align-items: center;
   margin-top: 24px;
   margin-bottom: 24px;
-  background-color: white;
+  /* background-color: white; */
+  /* color: ${(props) => props.theme.orange}; */
 `;
 
 export const CartButton = styled.TouchableOpacity``;

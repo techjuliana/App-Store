@@ -17,7 +17,7 @@ export default function Routes(){
       screenOptions={{
         headerShown: false,
 
-        drawerActiveBackgroundColor: '#00dae4',
+        drawerActiveBackgroundColor: '#F07704',
         drawerActiveTintColor: '#FFF',
 
         drawerInactiveBackgroundColor: '#f1f1f1',

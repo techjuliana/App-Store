@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  background-color:white;
+  background-color: ${(props) => props.theme.orange};
   padding: 14px;
 `;
 
@@ -12,18 +12,19 @@ export const CartContent = styled.View`
   align-items: center;
   margin-top: 24px;
   margin-bottom: 24px;
-  background-color: white;
+  background-color: ${(props) => props.theme.orange};
 `;
 
 export const Title = styled.Text`
   font-size: 24px;
   font-weight: bold;
+  color: ${(props) => props.theme.white};
 `;
 
 export const Dot = styled.View`
   align-items: center;
   justify-content: center;
-  background-color: yellow;
+  background-color: ${(props) => props.theme.yellow};
   width: 20px;
   height: 20px;
   border-radius: 12px;

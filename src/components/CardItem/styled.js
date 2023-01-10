@@ -2,7 +2,8 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   border: 1px;
-  border-color: "#DFDFDf";
+  /* border-color: "#DFDFDf"; */
+  /* color: ${(props) => props.theme.white}; */
   border-radius: 2px;
   margin-bottom: 14px;
   padding: 8px;
@@ -15,11 +16,13 @@ export const Imagem = styled.Image`
 `;
 
 export const Title = styled.Text`
+  color: ${(props) => props.theme.white};
   font-weight: bold;
   font-size: 18px;
 `;
 
 export const Price = styled.Text`
+  color: ${(props) => props.theme.white};
   font-size: 16px;
 `;
 
@@ -49,4 +52,5 @@ export const ButtonRemove = styled.TouchableOpacity`
 export const Amount = styled.Text`
   margin-left: 14px;
   margin-right: 14px;
+  color: ${(props) => props.theme.white};
 `;
