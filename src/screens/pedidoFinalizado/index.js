@@ -1,20 +1,17 @@
 import React from "react";
-import { View, TouchableOpacity, Text,Image } from "react-native";
+import { Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { Container, Imagem, Botao } from "./styled";
 export default function PedidoFinalizado() {
   const navigation = useNavigation();
   return (
-    <View>
-      <Image
-        source={require("./../../assets/feito.png")}
-        style={{ width: "100%", height:"96%"  }}
-      />
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Finalizado")}
-        style={{ width: "100%", backgroundColor:"yellow" }}
-      >
-        <Text>Continuar navegando</Text>
-      </TouchableOpacity>
-    </View>
+    <Container>
+      <Imagem source={require("./../../assets/feito.png")} />
+      <Botao onPress={() => navigation.navigate("Home")}>
+        <Text style={{ fontSize: 16, fontWeight: "bold" }}>
+          Comprar Novamente
+        </Text>
+      </Botao>
+    </Container>
   );
 }

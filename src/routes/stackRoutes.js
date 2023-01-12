@@ -4,12 +4,21 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/home";
 import Carrinho from "../screens/carrinho";
 import PedidoFinalizado from "../screens/pedidoFinalizado";
+import OnboardingIntro from "../screens/pedidoFinalizado";
 
 const Stack = createNativeStackNavigator();
 
 export default function StackRoutes() {
   return (
     <Stack.Navigator>
+
+    <Stack.Screen
+        name="OnboardingIntro"
+        component={OnboardingIntro}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Stack.Screen
         name="Home"
         component={Home}

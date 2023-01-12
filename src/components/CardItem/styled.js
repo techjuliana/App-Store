@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   border-width: 4px;
-  border-color: ${(props) => props.theme.yellow};
+  border-color: ${(props) => props.theme.green};
   border-radius: 10px;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;

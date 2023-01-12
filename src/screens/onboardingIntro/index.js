@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-export default function Onboarding() {
+export default function OnboardingIntro() {
   const navigation = useNavigation();
   return (
     <View>
