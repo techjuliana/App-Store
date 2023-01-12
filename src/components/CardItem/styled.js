@@ -42,7 +42,7 @@ export const AmountContainer = styled.View`
 `;
 
 export const ButtonAdd = styled.TouchableOpacity`
-  background-color: green;
+  background-color: ${(props) => props.theme.green};
   padding: 6px;
   padding-left: 14px;
   padding-right: 14px;
@@ -50,7 +50,7 @@ export const ButtonAdd = styled.TouchableOpacity`
 `;
 
 export const ButtonRemove = styled.TouchableOpacity`
-  background-color: red;
+  background-color: ${(props) => props.theme.red};
   padding: 6px;
   padding-left: 14px;
   padding-right: 14px;

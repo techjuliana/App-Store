@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { Text, FlatList, TouchableOpacity } from "react-native";
-import { Container, Total } from "./styled";
+import { Text, FlatList } from "react-native";
+import { Container, Total, BotaoFinalizar } from "./styled";
 import { useNavigation } from "@react-navigation/native";
 import { CartContext } from "../../components/contexts/CartContext";
 import CardItem from "../../components/CardItem";
@@ -14,7 +14,7 @@ export default function Carrinho() {
         data={cart}
         showsVerticalScrollIndicator={false}
         keyExtractor={(item) => String(item.id)}
-        ListEmptyComponent={() => <Text>Nenhum item no carrinho...</Text>}
+        ListEmptyComponent={() => <Text style={{ color: "white", fontWeight:"bold", textAlign:"center"}}>Nenhum item no carrinho...</Text>}
         renderItem={({ item }) => (
           <CardItem
             data={item}
@@ -24,9 +24,10 @@ export default function Carrinho() {
         )}
         ListFooterComponent={() => <Total>Total: R$ {total}</Total>}
       />
-      <TouchableOpacity onPress={() => navigation.navigate("Finalizado")}>
-        <Text>Finalizar pedido</Text>
-      </TouchableOpacity>
+      <BotaoFinalizar onPress={() => navigation.navigate("Finalizado")}>
+        <Text style={{ color: "black", fontWeight:"Bold", textAlign:"center"}}>Finalizar pedido</Text>
+      </BotaoFinalizar>
+      
     </Container>
   );
 }

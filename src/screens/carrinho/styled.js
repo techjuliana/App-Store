@@ -13,3 +13,10 @@ export const Total = styled.Text`
   color: ${(props) => props.theme.white};
   text-align:center;
 `;
+
+export const BotaoFinalizar = styled.TouchableOpacity`
+  background-color: ${(props) => props.theme.green};
+  text-align:center;
+  border-radius:20px;
+  padding:10px;
+`;
