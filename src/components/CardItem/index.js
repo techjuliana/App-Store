@@ -31,21 +31,20 @@ export default function CardItem({ data, addAmount, removeAmount }) {
 
   return (
     <Container>
-     
       <View>
-      <Imagem source={data.image} />
+        <Imagem source={data.image} />
         <Title>{data.name}</Title>
         <Price>R$ {data.price}</Price>
       </View>
 
       <AmountContainer>
-        <ButtonAdd onPress={handleDecrease}>
+        <ButtonAdd onPress={handleIncrease}>
           <Text>+</Text>
         </ButtonAdd>
 
         <Amount>{amount}</Amount>
 
-        <ButtonRemove onPress={handleIncrease}>
+        <ButtonRemove onPress={handleDecrease}>
           <Text>-</Text>
         </ButtonRemove>
       </AmountContainer>
