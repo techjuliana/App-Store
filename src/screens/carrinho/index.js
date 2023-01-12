@@ -4,17 +4,25 @@ import { Container, Total, BotaoFinalizar } from "./styled";
 import { useNavigation } from "@react-navigation/native";
 import { CartContext } from "../../components/contexts/CartContext";
 import CardItem from "../../components/CardItem";
+import Carrossel from "../../components/carrossel";
 
 export default function Carrinho() {
   const { cart, addItemCart, removeItemCart, total } = useContext(CartContext);
   const navigation = useNavigation();
   return (
     <Container>
+      <Carrossel />
       <FlatList
         data={cart}
         showsVerticalScrollIndicator={false}
         keyExtractor={(item) => String(item.id)}
-        ListEmptyComponent={() => <Text style={{ color: "white", fontWeight:"bold", textAlign:"center"}}>Nenhum item no carrinho...</Text>}
+        ListEmptyComponent={() => (
+          <Text
+            style={{ color: "white", fontWeight: "bold", textAlign: "center" }}
+          >
+            Nenhum item no carrinho...
+          </Text>
+        )}
         renderItem={({ item }) => (
           <CardItem
             data={item}
@@ -25,9 +33,12 @@ export default function Carrinho() {
         ListFooterComponent={() => <Total>Total: R$ {total}</Total>}
       />
       <BotaoFinalizar onPress={() => navigation.navigate("Finalizado")}>
-        <Text style={{ color: "black", fontWeight:"Bold", textAlign:"center"}}>Finalizar pedido</Text>
+        <Text
+          style={{ color: "black", fontWeight: "Bold", textAlign: "center" }}
+        >
+          Finalizar pedido
+        </Text>
       </BotaoFinalizar>
-      
     </Container>
   );
 }

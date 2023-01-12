@@ -29,13 +29,8 @@ export default function Routes(){
         name="HomeStack"
         component={StackRoutes}
         options={{
-          title: 'Inicio'
+          title: 'Cardapio'
         }}
-      />
-
-      <Drawer.Screen
-        name="Localização"
-        component={Mapa}
       />
 
       <Drawer.Screen

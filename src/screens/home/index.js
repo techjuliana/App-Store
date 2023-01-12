@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { FlatList, Image } from "react-native";
+import { FlatList, Image, View } from "react-native";
 import {
   Container,
   CartContent,
@@ -12,7 +12,6 @@ import Product from "../../components/product";
 import { useNavigation } from "@react-navigation/native";
 import { CartContext } from "../../components/contexts/CartContext";
 import Header from "../../components/header";
-import Carrossel from "../../components/carrossel";
 import burger1 from "./../../assets/1.jpeg";
 import burger2 from "./../../assets/2.jpeg";
 import burger3 from "./../../assets/3.jpeg";
@@ -111,7 +110,7 @@ export default function Home() {
           />
         </CartButton>
       </CartContent>
-      <Carrossel />
+
       <FlatList
         data={products}
         keyExtractor={(item) => String(item.id)}
