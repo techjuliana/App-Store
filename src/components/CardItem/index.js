@@ -40,13 +40,13 @@ export default function CardItem({ data, addAmount, removeAmount }) {
 
       <AmountContainer>
         <ButtonAdd onPress={handleDecrease}>
-          <Text>-</Text>
+          <Text>+</Text>
         </ButtonAdd>
 
         <Amount>{amount}</Amount>
 
         <ButtonRemove onPress={handleIncrease}>
-          <Text>+</Text>
+          <Text>-</Text>
         </ButtonRemove>
       </AmountContainer>
     </Container>
