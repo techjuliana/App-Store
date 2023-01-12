@@ -1,20 +1,31 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-export default function OnboardingIntro() {
-  const navigation = useNavigation();
+import Onboarding from "react-native-onboarding-swiper";
+import { Image } from "react-native";
+import { TextBtn, ContainerBtn } from "./styled";
+const Done = ({ ...props }) => (
+  <ContainerBtn {...props}>
+    <TextBtn>Iniciar Pedido</TextBtn>
+  </ContainerBtn>
+);
+
+const OnboardingScreen = ({ navigation }) => {
   return (
-    <View>
-      <Image
-        source={require("./../../assets/intro.png")}
-        style={{ width: 34, height: 36, alignItems:"center" }}
-      />
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Home")}
-        style={{ width: "100%", height:"96%"  }}
-      >
-        <Text>Entrar</Text>
-      </TouchableOpacity>
-    </View>
+    <Onboarding
+      DoneButtonComponent={Done}
+      onDone={() => navigation.navigate("Home")}
+      pages={[
+        {
+          backgroundColor: "#F07704",
+          image: (
+            <Image
+              source={require("./../../assets/intro.png")}
+              style={{ width: "100%", height: "100%" }}
+            />
+          ),
+        },
+      ]}
+    />
   );
-}
+};
+
+export default OnboardingScreen;

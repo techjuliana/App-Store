@@ -1,7 +1,15 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
-export const Container = styled.View``;
+export const ContainerBtn = styled.TouchableOpacity`
+  margin: 14px;
+`;
 
-export const Imagem = styled.Image``;
-
-export const Botao = styled.TouchableOpacity``;
+export const TextBtn = styled.Text`
+  font-size: 18px;
+  font-weight: bold;
+  color: ${(props) => props.theme.black};
+  background-color:${(props) => props.theme.green};
+  padding-left:15px;
+  padding-right:15px;
+  border-radius:20px;
+`;
