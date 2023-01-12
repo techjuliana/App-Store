@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/home";
 import Carrinho from "../screens/carrinho";
 import PedidoFinalizado from "../screens/pedidoFinalizado";
-import OnboardingIntro from "../screens/carrinho";
+import OnboardingIntro from "../screens/onboardingIntro";
 
 const Stack = createNativeStackNavigator();
 
